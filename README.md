@@ -12,5 +12,5 @@ Run ./code/data_process.py to preprocess the dataset.
 
 Run ./code/main.py to train the TransPTM.
 
-### dataset
+### Dataset
 dataset.csv
