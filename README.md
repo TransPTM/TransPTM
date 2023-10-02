@@ -11,3 +11,6 @@ Cuda 11.6
 Run ./code/data_process.py to preprocess the dataset.
 
 Run ./code/main.py to train the TransPTM.
+
+### dataset
+dataset.csv
