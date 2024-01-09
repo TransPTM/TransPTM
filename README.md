@@ -11,9 +11,9 @@ pytorch geometric 2.2.0
 Cuda 11.6
 
 ### How to run
-Run ./code/data_process.py to preprocess the dataset.
+Run ./data_preprocess/generate_data.py to generate graph data.
 
-Run ./code/main.py to train the TransPTM.
+Run ./model/main.py to train the TransPTM.
 
 ### Dataset
 dataset.csv
