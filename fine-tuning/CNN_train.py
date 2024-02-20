@@ -37,20 +37,19 @@ class Classifier(nn.Module):
         self.conv1 = nn.Conv1d(in_channels=1024, out_channels=64, kernel_size=3, stride=1, padding=1)
         self.relu = nn.ReLU()
         self.flatten = nn.Flatten()
-        # Assuming convolution does not change sequence length due to padding
-        self.fc1 = nn.Linear(64 * 25, 4)  # First fully connected layer after flattening
-        self.relu1 = nn.ReLU()  # Activation function for first fully connected layer
-        self.fc2 = nn.Linear(4, 1)  # Second fully connected layer, output layer
+        self.fc1 = nn.Linear(64 * 25, 4)  
+        self.relu1 = nn.ReLU()  
+        self.fc2 = nn.Linear(4, 1)  
 
     def forward(self, x):
-        x = x.permute(0, 2, 1)  # Adjust dimensions for Conv1d input requirements
+        x = x.permute(0, 2, 1) 
         x = self.conv1(x)
         x = self.relu(x)
-        x = self.flatten(x)  # Flatten multi-dimensional convolution output for dense layer
-        x = self.fc1(x)  # Pass through the first fully connected layer
-        x = self.relu1(x)  # Activation function
-        x = self.fc2(x)  # Pass through the second fully connected layer
-        x = torch.sigmoid(x)  # Use sigmoid activation function for final prediction output
+        x = self.flatten(x)  
+        x = self.fc1(x)  
+        x = self.relu1(x)  
+        x = self.fc2(x)  
+        x = torch.sigmoid(x)  
         return x
 
 
