@@ -77,7 +77,7 @@ state_dict = {
 }
 
 
-num_epochs = 20
+num_epochs = 50
 for epoch in range(num_epochs):
     model.train() 
     total_loss, total_accuracy = 0, 0
