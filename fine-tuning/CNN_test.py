@@ -76,7 +76,7 @@ for sequences, labels in tqdm(test_loader, desc="Testing"):
     outputs = model(input_ids=input_ids, attention_mask=attention_mask)
     embeddings = outputs.last_hidden_state
     predictions = classifier(embeddings).squeeze(-1)
-    preds = predictions >= 0.33
+    preds = predictions >= 0.5
     all_labels.extend(labels.cpu().numpy())
     all_predictions.extend(preds.cpu().numpy())
 
