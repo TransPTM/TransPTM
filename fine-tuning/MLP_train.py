@@ -74,7 +74,7 @@ optimizer = optim.Adam(classifier.parameters(), lr=1e-4)
 criterion = nn.BCELoss()
 
 best_auc = 0.0  
-model_save_path = 'mlp_6_1e-4_20.pth'
+model_save_path = 'mlp_6_1e-4_50.pth'
 state_dict = {
     'T5EncoderModel': model.state_dict(),
     'Classifier': classifier.state_dict(),
