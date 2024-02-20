@@ -70,7 +70,7 @@ optimizer = optim.Adam(classifier.parameters(), lr=1e-6)
 criterion = nn.BCELoss()
 
 best_auc = 0.0  
-model_save_path = 'cnn_6_1e-6_20.pth'
+model_save_path = 'cnn_6_1e-6_50.pth'
 state_dict = {
     'T5EncoderModel': model.state_dict(),
     'Classifier': classifier.state_dict(),
