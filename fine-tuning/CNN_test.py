@@ -53,7 +53,7 @@ tokenizer = T5Tokenizer.from_pretrained(model_name)
 model = T5EncoderModel.from_pretrained(model_name).to(device)
 classifier = Classifier().to(device)
 
-model_save_path = 'cnn_6_1e-6_20.pth'
+model_save_path = 'cnn_6_1e-6_50.pth'
 state_dict = torch.load(model_save_path, map_location=device)
 model.load_state_dict(state_dict['T5EncoderModel'])
 classifier.load_state_dict(state_dict['Classifier'])
