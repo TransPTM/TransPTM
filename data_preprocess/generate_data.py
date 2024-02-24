@@ -10,7 +10,6 @@ from torch_geometric.utils import dense_to_sparse
 EMB_PATH = r'D:\OneDrive - USTC\DATA\acetyl\protT5'
 
 res_to_id = {
-    "*": 0,
     "K": 1,
     "A": 2,
     "R": 3,
@@ -31,7 +30,6 @@ res_to_id = {
     "W": 18,
     "Y": 19,
     "V": 20,
-    "U": 6
 }
 
 
