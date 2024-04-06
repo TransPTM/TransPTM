@@ -16,4 +16,4 @@ Run ./data_preprocess/generate_data.py to generate graph data.
 Run ./model/main.py to train the TransPTM.
 
 ### Dataset
-dataset.csv
+NHAC.csv (Non-Histone Acetylation Collection)
