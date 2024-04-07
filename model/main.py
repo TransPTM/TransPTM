@@ -12,7 +12,7 @@ random.seed(42); np.random.seed(42)
 if __name__ == '__main__':
     # args
     args = {
-        'epochs': 500,
+        'epochs': 100,
         'batch_size': 64,
         'device': 'cuda',
         'opt': 'adam',
@@ -21,7 +21,7 @@ if __name__ == '__main__':
         'opt_decay_rate': 0.92,
         'weight_decay': 1e-4,
         'lr': 3e-5,
-        'es_patience': 20,
+        'es_patience': 10,
         'save': True
     }
     args = SimpleNamespace(**args)
