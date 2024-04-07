@@ -17,4 +17,5 @@ Run ./model/main.py to train the TransPTM.
 
 ### Dataset
 NHAC.csv (Non-Histone Acetylation Collection)
+
 unique_id format: Uniprot ID; acetylation position; protein sequence full length; label
