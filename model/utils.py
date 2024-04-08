@@ -59,8 +59,8 @@ class TrainProcessor:
             pred_ls.append(model(batch))
             y_ls.append(batch.y)
 
-        pred = torch.cat(pred_ls, dim=0).reshape(-1)  # 预测出来的y=1的概率
-        y = torch.cat(y_ls, dim=0).reshape(-1)  # 真实的标签
+        pred = torch.cat(pred_ls, dim=0).reshape(-1)  
+        y = torch.cat(y_ls, dim=0).reshape(-1)  
 
         # get metrics
         metrics = {}
