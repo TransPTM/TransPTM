@@ -21,18 +21,14 @@ class GNNTransTest(GNNTrans):
     def forward(self, data):
         x, edge_index, batch = data.emb, data.edge_index, data.batch
         idx = (data.ptr + int(len(data.seq[0]) / 2))[:-1]
-        #
         x = self.get_conv_result(x, edge_index)
-
         x = x[idx]
         out = self.mlp(x)
-
         return x, out
 
 
 def get_alpha(model, data):
     model(data)
-
     # alpha is a "seq_len x seq_len" matrix
     # each row corresponds to a residue and sums to 1
     alpha = model.convs[0].alpha.detach().numpy().reshape(seq_len, seq_len).T  # alpha.sum(axis=1) = [1]
@@ -52,7 +48,6 @@ if __name__ == '__main__':
         model.load_state_dict(torch.load(weight))
         model.eval()
 
-        #
         df = pd.read_csv('./data/dataset.csv')
         df = df.query('set == "train"').reset_index(drop=True)
         # alpha_ls = []
