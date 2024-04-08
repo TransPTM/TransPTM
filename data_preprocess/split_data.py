@@ -51,4 +51,4 @@ if __name__ == '__main__':
     df = pd.DataFrame(record_ls, columns=columns)
     df['label'] = df['unique_id'].apply(lambda x: int(x.split(';')[-1]))
     df = split_data(df, val_size=0.1, test_size=0.2)
-    df.to_csv('../data/dataset.csv', index=False)
+    df.to_csv('./dataset.csv', index=False)
