@@ -30,7 +30,7 @@ if __name__ == '__main__':
     len_ls = [11, 15, 21, 25, 31, 35, 41, 45, 51, 55, 61]
     # len_ls = [41]
     for seq_len in len_ls:
-        train_ls, val_ls, test_ls = torch.load(f'./data/processed/{seq_len}.pt')
+        train_ls, val_ls, test_ls = torch.load(f'./{seq_len}.pt')
         train_data_loader = DataLoader(train_ls, batch_size=args.batch_size)
         val_data_loader = DataLoader(val_ls, batch_size=args.batch_size)
         test_data_loader = DataLoader(test_ls, batch_size=args.batch_size)
