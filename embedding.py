@@ -141,7 +141,7 @@ if __name__ == '__main__':
     """
     # Replace this file with your own (multi-)FASTA
     # Headers are expected to start with ">";
-    seq_path = r'D:\OneDrive - USTC\DATA\acetyl\dataset.fasta'
+    seq_path = './dataset.fasta'
 
     # whether to retrieve embeddings for each residue in a protein
     # --> Lx1024 matrix per protein with L being the protein's length
@@ -171,7 +171,7 @@ if __name__ == '__main__':
     for key, value in tqdm(seqs.items()):
         data = {key: value}
         name = key.split()[0]
-        save_path = 'D:\\OneDrive - USTC\\DATA\\acetyl\\protT5\\{}.npy'.format(name)
+        save_path = './protT5/{}.npy'.format(name)
         # Compute embeddings and/or secondary structure predictions
         results = get_embeddings(
             model=model,
