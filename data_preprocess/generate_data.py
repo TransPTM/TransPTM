@@ -7,7 +7,7 @@ from torch_geometric.data import Data
 from torch_geometric.utils import dense_to_sparse
 
 
-EMB_PATH = r'D:\OneDrive - USTC\DATA\acetyl\protT5'
+EMB_PATH = './protT5'
 
 res_to_id = {
     "K": 1,
@@ -97,11 +97,11 @@ class Processor:
 
 
 if __name__ == '__main__':
-    df = pd.read_csv('../data/dataset.csv')
+    df = pd.read_csv('./dataset.csv')
 
     len_ls = [11, 15, 21, 25, 31, 35, 41, 45, 51, 55, 61]
     for seq_len in len_ls:
-        save_path = f'../data/processed3/{seq_len}.pt'
+        save_path = f'./{seq_len}.pt'
         processor = Processor(df, length=seq_len)
         data_ls = processor.run()
         torch.save(data_ls, save_path)
