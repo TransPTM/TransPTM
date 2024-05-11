@@ -1,6 +1,8 @@
 ### TranPTM
 A Transformer-Based Model for Non-Histone Acetylation Site Prediction
 
+*Briefings in Bioinformatics, Volume 25, Issue 3, May 2024, bbae219, https://doi.org/10.1093/bib/bbae219*
+
 ### Environment
 python 3.8.0
 
