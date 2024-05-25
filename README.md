@@ -25,3 +25,5 @@ unique_id format: Uniprot ID; acetylation position; protein sequence full length
 2. NHAC(full-length).csv
 
 full-length non-histone protein sequences with lysine acetylation positions
+
+Coming soon...
