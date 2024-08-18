@@ -18,12 +18,8 @@ Run ./data_preprocess/generate_data.py to generate graph data.
 Run ./model/main.py to train the TransPTM.
 
 ### Dataset
-1. NHAC.csv (Non-Histone Acetylation Collection)
+NHAC.csv (Non-Histone Acetylation Collection)
 
 unique_id format: Uniprot ID; acetylation position; protein sequence full length; label
 
-2. NHAC(full-length).csv
 
-full-length non-histone protein sequences with lysine acetylation positions
-
-Coming soon...
