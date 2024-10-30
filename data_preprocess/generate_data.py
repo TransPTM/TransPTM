@@ -61,20 +61,13 @@ class Processor:
             x = torch.tensor(x, dtype=torch.int32).unsqueeze(1)
 
             n = len(seq)
-            edge_index1 = dense_to_sparse(torch.ones((n, n)))[0]
-            a = torch.zeros((n, n))
-            a[range(n), np.arange(n)]= 1
-            a[range(n-1), np.arange(n-1) + 1] = 1
-            a[np.arange(n-1) + 1, np.arange(n-1)] = 1
-            idx = int(n / 2)
-            a[[idx]*n, range(n)] = 1
-            edge_index2 = dense_to_sparse(a)[0]
+            edge_index = dense_to_sparse(torch.ones((n, n)))[0]
+            
 
             data = Data(
                 x=x,
                 x_one_hot=x_one_hot,
-                edge_index1=edge_index1,
-                edge_index2=edge_index2,
+                edge_index=edge_index,
                 emb=emb,
                 seq=seq,
                 uniprot=uniprot,
